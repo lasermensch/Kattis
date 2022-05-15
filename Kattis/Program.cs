@@ -117,10 +117,9 @@ namespace Kattis
                 {
                     pos[0] += direction[0];
                     pos[1] += direction[1];
-                    if (pos[0] > 7)
+                    if (pos[0] > 7 || pos[1] < 0 || pos[1] > 7 || pos[0] < 0)
                         break;
-                    if (pos[1] > 7)
-                        break;
+                    
                     if (board[pos[0], pos[1]] == 'D')
                     {
                         isDiamond = true;
